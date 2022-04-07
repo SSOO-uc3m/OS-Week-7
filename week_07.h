@@ -17,7 +17,7 @@ int exercise02();
 
 void *hello(void *arg);
 
-int exercise03();
+int exercise03(int argc, char * argv[]);
 
 void *func1 ();
 

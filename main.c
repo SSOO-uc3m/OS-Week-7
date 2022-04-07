@@ -1,6 +1,6 @@
 #include "week_07.h"
 
-int main(void) {
-exercise01();
+int main(int argc, char * argv[] ) {
+
   return 0;
 }

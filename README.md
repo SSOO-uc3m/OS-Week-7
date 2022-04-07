@@ -27,6 +27,16 @@ a) Implement the program
 
 b) Run the program and see what happens to the value of myglobal. Is it the same if it is run multiple times?
 
+When modifying a global variable concurrently by parent and child thread, we cannot know what the final value will be. In each case it can come out differently, both in printing order and in number. Below are 2 running examples:
+````
+./main o.o.o...o.o.o.o..o.oo.o.o.o.o.o.o..o.o.oo.o.o.o.o.o..o.o.o.o..o.o.o.oo.o.o.o..........................ooooo.o.o.o.o.o.o.o..o.o.o.o.oo.o.o.o.o.o.o.o.o.o.o.oo.o.o.o.o.o.o.o.o.o.o.ooooooooooooooooooooooo
+myglobal equals 123
+
+./main
+o.o.o.o.o.o.oo.ooo.o.o.oo.......o.o.oo.o..o.o.oo..oo..oo.o..oo..oo.oooooooooooooooooo.o.o.oo..oo..oo.o..oo.oooo.o.o..o.ooo.o.o.o..o.oo.o.ooo..o..oo..o.o.o.oo.o.o..o.o.o.o..oo..oo......................
+myglobal equals 101
+````
+
 ###  Exercise 03
 
 Write a program that creates a variable number of threads, indicated with an argument. 
@@ -47,7 +57,7 @@ Write a program that
  
 Write a program that adds values in concurrency using threads. 
 
-- The program declares a global variable sum_total 
+- The program declares a global variable total_addition 
 - A procedure called ``add`` that increments ```total_addition``` by 100 using an intermediate local variable, sleeps for a second, and assigns the internal variable to ```total_addition```.
 - The main then creates 10 threads ``add``, waits for them to finish, prints the computed sum value, and terminates.
 
