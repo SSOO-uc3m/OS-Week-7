@@ -61,7 +61,7 @@ void *hello(void *arg) {
         return (NULL);
 }
 
-int exercise03(){
+int exercise03(int argc, char * argv[]){
 
   
 }
