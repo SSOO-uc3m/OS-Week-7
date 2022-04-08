@@ -1,5 +1,5 @@
-#ifndef WEEK_07_H    
-#define WEEK_07_H   
+#ifndef WEEK_08_H    
+#define WEEK_08_H   
 
 #define MAX_THREAD 10
 
@@ -29,4 +29,4 @@ void * add (void *arg) ;
  
 int exercise05();
 
-#endif /* WEEK_07_H */
+#endif /* WEEK_08_H */
